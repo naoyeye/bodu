@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yang bodu</title>
+<meta name="keywords" content="bodu-yang, bodu yang, bodu"/>
+<meta name="description" content="最初不相识，最终不相认" />
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" href="css/typo.css" />
+<!-- <link rel="stylesheet" href="css/bootstrap.css" /> -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<style type="text/css">
+    html{height: 100%;}
+    body{background: url(img/Pepsized_Blur_23.jpg) center center no-repeat;background-size: cover;height: 100%;}
+    #yangbodu{height: 100%;width: 100%;display:table;}
+    #yangbodu h1{font-size: 40px;padding: 0;margin: 0; color: #fff;vertical-align:middle;display:table-cell;text-align: center;text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);font-weight: normal;}
+    #yangbodu h1 span{font-family: "Helvetica Neue",Helvetica;font-size: 300px;font-weight: bold;letter-spacing: 2px; line-height: 1;}
+    @media screen and (max-width: 300px) {
+        #yangbodu h1 span {
+            font-size: 70px;
+        }
+    }
+
+    @media screen and (min-width: 300px) {
+        #yangbodu h1 span {
+            font-size: 100px;
+        }
+    }
+
+    @media screen and (min-width: 400px) {
+        #yangbodu h1 span {
+            font-size: 150px;
+        }
+    }
+
+    @media screen and (min-width: 500px) {
+        #yangbodu h1 span {
+            font-size: 200px;
+        }
+    }
+
+    @media screen and (min-width: 600px) {
+        #yangbodu h1 span {
+            font-size: 250px;
+        }
+    }
+
+    @media screen and (min-width: 700px) {
+        #yangbodu h1 span {
+            font-size: 300px;
+        }
+    }
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9097302-13', 'yangbodu.com');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+$(function(){
+    var old_time = '2011-05-17'
+    
+    var myT = new Date(),
+        myYear = myT.getFullYear(),
+        myMonth = myT.getMonth() + 1,
+        myDate = myT.getDate();
+
+    if(myMonth < 10){
+        myMonth = '0' + myMonth
+    }
+
+    if(myDate < 10){
+        myDate = '0' + myDate
+    }
+
+    var myTime = myYear + '-' + myMonth + '-' + myDate;
+
+    function daysBetween(DateOne,DateTwo){
+        var OneMonth = DateOne.substring(5,DateOne.lastIndexOf ('-'));  
+        var OneDay = DateOne.substring(DateOne.length,DateOne.lastIndexOf ('-')+1);  
+        var OneYear = DateOne.substring(0,DateOne.indexOf ('-'));  
+
+        var TwoMonth = DateTwo.substring(5,DateTwo.lastIndexOf ('-'));  
+        var TwoDay = DateTwo.substring(DateTwo.length,DateTwo.lastIndexOf ('-')+1);  
+        var TwoYear = DateTwo.substring(0,DateTwo.indexOf ('-'));  
+      
+        var cha=((Date.parse(OneMonth+'/'+OneDay+'/'+OneYear)- Date.parse(TwoMonth+'/'+TwoDay+'/'+TwoYear))/86400000);   
+        return Math.abs(cha);  
+    }
+
+    var days = daysBetween(old_time, myTime),
+        html = '<h1><span>' + days + '</span></h1>';
+
+    $('#yangbodu').css({'margin-bottom' : 0}).append(html);
+
+})
+</script>
+</head>
+<body>
+ 
+   <div id="yangbodu"></div>
+
+</body>
+</html>
+
